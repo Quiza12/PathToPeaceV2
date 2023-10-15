@@ -23,7 +23,7 @@
     -ms-flex-pack: center;
 
     .filter::after{
-        background-color: rgba(0, 0, 0, 0.5);
+        // background-color: rgba(0, 0, 0, 0.5);
         content: "";
         display: block;
         height: 100%;
@@ -52,7 +52,7 @@
 .page-header .motto{
     text-align: left;
     z-index: 3;
-    color: #fff;
+    color: #000;
     position: relative;
 
 }

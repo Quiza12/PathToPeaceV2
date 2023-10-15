@@ -1,17 +1,45 @@
-<footer class="footer">
+<footer class="footer text-center">
     <div class="container">
         <div class="row">
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="https://www.creative-tim.com">Creative Tim</a></li>
-                    <li><a href="http://blog.creative-tim.com">Blog</a></li>
-                    <li><a href="https://www.creative-tim.com/license">Licenses</a></li>
-                </ul>
-            </nav>
-            <div class="credits ml-auto">
-                <span class="copyright">
-                    © {{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim
-                </span>
+            <div class="col-md-4">
+                <nav class="footer-nav ml-auto">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar">
+                            <a [routerLink]="['/p2p']"><img src="./assets/img/path-to-peace-logo.png" alt="..."></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-4">
+                <nav class="footer-nav ml-auto" style="margin-top: 30px; margin-bottom: 30px;">
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                                <p class="d-lg-none">Twitter</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/pathtopeace.me" target="_blank">
+                                <i class="fa fa-facebook-square"></i>
+                                <p class="d-lg-none">Facebook</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/pathtopeace.me/" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                                <p class="d-lg-none">Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-nav ml-auto" style="margin-top: 40px; margin-bottom: 40px;">
+                    <p>© Path to Peace  {{test | date: 'yyyy'}}</p>
+                    <p>ABN: 123 456 7890</p>
+                    <p><a href="https://www.matthewquerzoli.com/" target="_blank">Made by his brother <i class="fa fa-heart heart"></i></a></p>
+                </div>  
             </div>
         </div>
     </div>

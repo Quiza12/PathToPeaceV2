@@ -86,7 +86,8 @@
 
         &.dropdown-primary .dropdown-item:hover,
         &.dropdown-primary .dropdown-item:focus{
-            background-color: $bg-primary;
+            // background-color: $bg-primary;
+            background-color: $bg-warning;
         }
         &.dropdown-info .dropdown-item:hover,
         &.dropdown-info .dropdown-item:focus{

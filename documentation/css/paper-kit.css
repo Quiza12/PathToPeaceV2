@@ -2171,7 +2171,7 @@ textarea.form-control {
   color: #FFFFFF;
 }
 .navbar-transparent .navbar-nav .nav-item .nav-link:not(.btn), [class*="bg"] .navbar-nav .nav-item .nav-link:not(.btn) {
-  color: #FFFFFF;
+  color: #66615b;
   border-color: #FFFFFF;
 }
 .navbar-transparent .navbar-nav .active .nav-link
@@ -5735,7 +5735,7 @@ textarea.form-control {
 }
 
 .page-header {
-  background-color: #B2AFAB;
+  /* background-color: #B2AFAB; */
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
@@ -5749,15 +5749,14 @@ textarea.form-control {
   justify-content: center;
 }
 .page-header .filter::after {
-  background-color: rgba(0, 0, 0, 0.5);
-  content: "";
+  /* content: "";
   display: block;
   height: 100%;
   left: 0;
   top: 0;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 1; */
 }
 .page-header.page-header-small {
   min-height: 65vh !important;
@@ -5774,7 +5773,7 @@ textarea.form-control {
 .page-header .motto {
   text-align: left;
   z-index: 3;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 

@@ -11,7 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
-
+import { P2pModule } from './pathtopeace/p2p.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { ExamplesModule } from './examples/examples.module';
     ComponentsModule,
     ExamplesModule,
     AppRoutingModule,
+    P2pModule
   ],
   providers: [],
   bootstrap: [AppComponent]
