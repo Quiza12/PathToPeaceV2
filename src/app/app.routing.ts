@@ -11,6 +11,9 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 
 import { P2pHomeComponent } from './pathtopeace/home/p2p.home.component';
 import { P2pCoachingComponent } from './pathtopeace/coaching/p2p.coaching.component';
+import { P2pCoachingAdultProgramsComponent } from './pathtopeace/coaching/programs/p2p.coaching.adult-programs.component';
+import { P2pCoachingChildProgramsComponent } from './pathtopeace/coaching/programs/p2p.coaching.child-programs.component';
+import { P2pCoachingApplyComponent } from './pathtopeace/coaching/programs/p2p.coaching.apply.component';
 import { P2pAboutMeComponent } from './pathtopeace/about-me/p2p.about-me.component';
 import { P2pContactComponent } from './pathtopeace/contact/p2p.contact.component';
 import { P2pYourStoriesLandingComponent } from './pathtopeace/empowering-you/your-stories/p2p.your-stories.landing.component';
@@ -25,6 +28,9 @@ const routes: Routes =[
     { path: '', redirectTo: 'p2p', pathMatch: 'full' },
     { path: 'p2p',                       component: P2pHomeComponent },
     { path: 'coaching',                  component: P2pCoachingComponent },
+    { path: 'coaching/adult-programs',   component: P2pCoachingAdultProgramsComponent },
+    { path: 'coaching/child-programs',   component: P2pCoachingChildProgramsComponent },
+    { path: 'coaching/apply',            component: P2pCoachingApplyComponent },
     { path: 'about',                     component: P2pAboutMeComponent },
     { path: 'contact',                   component: P2pContactComponent },
     { path: 'your-stories',              component: P2pYourStoriesLandingComponent },

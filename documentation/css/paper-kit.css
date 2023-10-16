@@ -2681,7 +2681,7 @@ textarea.form-control {
 }
 
 .footer {
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   position: relative;
   line-height: 20px;
 }

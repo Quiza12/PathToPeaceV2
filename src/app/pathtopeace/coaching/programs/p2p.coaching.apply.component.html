@@ -1,0 +1,79 @@
+
+<div class="main">
+    <div class="section landing-section" style="margin-top: 120px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="text-center">Apply for Coaching</h2>
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Date of Birth</label>
+                                <div class="input-group">
+                                    <div class="input-group date">
+                                      <input class="form-control" placeholder="yyyy-mm-dd"
+                                             name="dp" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+                                      <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                        </span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Location</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Location" (focus)="focus1=true" (blur)="focus1=false" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Program</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Location" (focus)="focus1=true" (blur)="focus1=false" >
+                                </div>
+                            </div>
+                        </div>
+                        <label>Greatest challenge?</label>
+                        <textarea class="form-control" rows="4" placeholder="What is your greatest challenge in life right now"></textarea>
+                        <label>Other</label>
+                        <textarea class="form-control" rows="4" placeholder="What do you think is holding you back from overcoming this challenge? "></textarea>
+                        <div class="row">
+                            <div class="col-md-4 mr-auto ml-auto">
+                                <button class="btn btn-danger btn-lg btn-fill">Submit Application</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

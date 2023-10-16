@@ -1,5 +1,5 @@
 .footer{
-    background-attachment: fixed;
+    background-attachment: none;
     position: relative;
     line-height: 20px;
 }
@@ -44,7 +44,11 @@
     color: #EB5E28;
 }
 .footer{
-    background-color: $white-color;
+    // background-color: $white-color;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(235,191,148,1) 0%, rgba(255,255,255,1) 100%); 
+    border-top: 1px solid #FFFFFF;
+    box-shadow: none;
     line-height: $line-height;
 
     &.footer-black{
@@ -187,7 +191,7 @@
     padding: 35px 0;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     margin-top: 0;
 
     .form-group{

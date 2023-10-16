@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { P2pEmpoweringYouModule } from './empowering-you/p2p.empowering-you.module';
+import { P2pCoachingModule } from './coaching/p2p.coaching.module';
 
 import { P2pHomeComponent } from './home/p2p.home.component';
-import { P2pCoachingComponent } from './coaching/p2p.coaching.component';
 import { P2pAboutMeComponent } from './about-me/p2p.about-me.component';
 import { P2pContactComponent } from './contact/p2p.contact.component';
 
@@ -15,11 +15,11 @@ import { P2pContactComponent } from './contact/p2p.contact.component';
         CommonModule,
         FormsModule,
         NgbModule,
-        P2pEmpoweringYouModule
+        P2pEmpoweringYouModule,
+        P2pCoachingModule
     ],
     declarations: [
         P2pHomeComponent,
-        P2pCoachingComponent,
         P2pAboutMeComponent,
         P2pContactComponent
     ]
