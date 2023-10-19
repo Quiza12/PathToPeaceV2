@@ -1,6 +1,5 @@
 
 <div class="main" style="margin-top: 50px;">
-
     <div class="section landing-section">
         <div class="container">
             <div class="row"> 
@@ -20,25 +19,15 @@
             </div>
             <br/>
             <div class="row"> 
-                <div class="col-md-6 mr-auto ml-auto">
+                <div class="col-md-6 mr-auto ml-auto" *ngFor="let podcast of podcasts; let i = index">
                     <div class="rounded podcast">
-                        <h4>Anastasia's Story</h4>
+                        <h4>{{podcast.title}}</h4>
                         <br/>
-                        <iframe src="https://www.youtube.com/embed/zhekX8jg55A?si=fLSB4tPN-yuGhL74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <br/>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
-                    </div>
-                </div>
-                <div class="col-md-6 mr-auto ml-auto">
-                    <div class="rounded podcast">
-                        <h4>Matthew's Story</h4>
-                        <br/>
-                        <iframe src="https://www.youtube.com/embed/NYshViNxE7o?si=ygYvzzUoRBzc6GhP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
+                        <iframe [src]="santiseUrl(podcast.link)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p class="btn-just-icon btn-warning btn-round"><b>{{podcast.tag}}</b></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Podcast } from '../../../../classes/podcast';
+import { PodcastEntries } from '../../../../data/podcast-entries.service';
 
 @Component({
     selector: 'p2p-app-your-stories-podcasts',
@@ -10,8 +13,16 @@ export class P2pYourStoriesPodcastsComponent implements OnInit {
   focus: any;
   focus1: any;
 
-  constructor() { }
+  podcasts: Podcast[];
 
-  ngOnInit() {}
+  constructor(public sanitizer: DomSanitizer) { }
+
+  ngOnInit() {
+    this.podcasts = new PodcastEntries().podcastEntries;
+  }
+
+  santiseUrl(url:any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
 }
