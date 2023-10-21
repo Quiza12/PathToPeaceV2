@@ -24,7 +24,11 @@
                         <h4>{{podcast.title}}</h4>
                         <br/>
                         <iframe [src]="santiseUrl(podcast.link)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <p class="btn-just-icon btn-warning btn-round"><b>{{podcast.tag}}</b></p>
+                        <div>
+                            <ul class="list-inline">
+                                <li class="list-inline-item tag" *ngFor="let tag of podcast.tags; let j = index">{{tag}}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { PeaceOfAdvice } from '../../../classes/peace-of-advice';
+import { PeaceOfAdviceEntries } from '../../../data/peace-of-advice-entries.service';
 
 @Component({
     selector: 'p2p-app-peace-of-advice',
@@ -10,8 +13,16 @@ export class P2pPeaceOfAdviceComponent implements OnInit {
   focus: any;
   focus1: any;
 
-  constructor() { }
+  peacesOfAdvice: PeaceOfAdvice[];
 
-  ngOnInit() {}
+  constructor(public sanitizer: DomSanitizer) { }
+
+  ngOnInit() {
+    this.peacesOfAdvice = new PeaceOfAdviceEntries().peaceOfAdviceEntries;
+  }
+
+  santiseUrl(url:any) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
 }

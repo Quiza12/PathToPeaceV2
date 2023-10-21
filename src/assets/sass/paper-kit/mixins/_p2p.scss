@@ -1,0 +1,11 @@
+// Mixin for generating new styles
+@mixin tag-styles($btn-color, $btn-states-color) {
+    background-color: $btn-color;
+    border-color: $btn-color;
+    color: $white-color;
+    @include opacity(1);
+
+    .caret{
+      border-top-color: $white-color;
+    }
+}
