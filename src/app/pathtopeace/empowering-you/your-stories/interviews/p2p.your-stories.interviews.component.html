@@ -13,43 +13,20 @@
             </div>
             <br/>
             <div class="row"> 
-                <div class="col-md-4 mr-auto ml-auto">
-                    <div>
-                        <h4>Jonathon's Story</h4>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
-                        <p class="excerpt">Career-wise I had been successful but was not really enjoying work anymore. I felt like I didn't fit in to the industry I worked in...</p>
+                <div class="col-md-4 mr-auto ml-auto" *ngFor="let personalExperience of personalExperiences; let i = index">
+                    <div class="rounded personal-experience">
+                        <h4>{{personalExperience.title}}</h4>
+                        <div>
+                            <ul class="list-inline">
+                                <li class="list-inline-item tag" *ngFor="let tag of personalExperience.tags; let j = index">{{tag}}</li>
+                            </ul>
+                        </div>
                         <br/>
-                        <p class="btn btn-outline-warning btn-round"><b>Continue reading...</b></p>
+                        <p class="excerpt">{{personalExperience.preamble}}</p>
+                        <br/>
+                        <a href="#/your-stories/interviews/{{personalExperience.id}}" class="btn btn-outline-warning btn-round"><b>Continue reading...</b></a>
                     </div>
                 </div>
-                <div class="col-md-4 mr-auto ml-auto">
-                    <div>
-                        <h4>Yes Means Yes #10</h4>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
-                        <p class="excerpt">I had been out all night for a friend's birthday and I decided I was going to walk back to my boyfriend's house.</p>
-                        <br/>
-                        <p class="btn btn-outline-warning btn-round"><b>Continue reading...</b></p>
-                    </div>
-                </div>
-                <div class="col-md-4 mr-auto ml-auto">
-                    <div>
-                        <h4>Yes Means Yes #9</h4>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
-                        <p class="excerpt">My personal experiences occurred mainly from the ages of 15-17, a very vulnerable age in which individuals began sexualising me.</p>
-                        <br/>
-                        <p class="btn btn-outline-warning btn-round"><b>Continue reading...</b></p>
-                    </div>
-                </div>
-                <div class="col-md-4 mr-auto ml-auto">
-                    <div>
-                        <h4>Yes Means Yes #8</h4>
-                        <p class="btn-just-icon btn-warning btn-round"><b>Tag</b></p>
-                        <p class="excerpt">I had been out all night for a friend's birthday and I decided I was going to walk back to my boyfriend's house.</p>
-                        <br/>
-                        <p class="btn btn-outline-warning btn-round"><b>Continue reading...</b></p>
-                    </div>
-                </div>
- 
             </div>
         </div>
     </div>

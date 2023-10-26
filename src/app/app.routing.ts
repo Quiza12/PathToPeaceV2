@@ -19,6 +19,7 @@ import { P2pContactComponent } from './pathtopeace/contact/p2p.contact.component
 import { P2pYourStoriesLandingComponent } from './pathtopeace/empowering-you/your-stories/p2p.your-stories.landing.component';
 import { P2pYourStoriesPodcastsComponent } from './pathtopeace/empowering-you/your-stories/podcasts/p2p.your-stories.podcasts.component';
 import { P2pYourStoriesInterviewsComponent } from './pathtopeace/empowering-you/your-stories/interviews/p2p.your-stories.interviews.component';
+import { P2pYourStoriesInterviewsViewComponent } from './pathtopeace/empowering-you/your-stories/interviews/p2p.your-stories.interviews.view.component';
 import { P2pPeacefulActivitiesComponent } from './pathtopeace/empowering-you/peaceful-activities/p2p.peaceful-activities.component';
 import { P2pPeaceOfAdviceComponent } from './pathtopeace/empowering-you/peace-of-advice/p2p.peace-of-advice.component';
 
@@ -36,6 +37,7 @@ const routes: Routes =[
     { path: 'your-stories',              component: P2pYourStoriesLandingComponent },
     { path: 'your-stories/podcasts',     component: P2pYourStoriesPodcastsComponent },
     { path: 'your-stories/interviews',   component: P2pYourStoriesInterviewsComponent },
+    { path: 'your-stories/interviews/:id',   component: P2pYourStoriesInterviewsViewComponent },
     { path: 'peaceful-activities',       component: P2pPeacefulActivitiesComponent },
     { path: 'peace-of-advice',           component: P2pPeaceOfAdviceComponent },
 
