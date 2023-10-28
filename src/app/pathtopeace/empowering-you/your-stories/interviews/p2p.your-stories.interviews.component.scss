@@ -4,11 +4,16 @@
 @import '../../../../../assets/sass/paper-kit/mixins/transparency';
 @import '../../../../../assets/sass/paper-kit/mixins/p2p';
 
-// .personal-experience {
-//     color: #fff;
-//     background: #59797D;
-//     padding: 20px;
-// }
+.personal-experience {
+    color: #fff;
+    background: #59797D;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+        background: #2c3b3d;
+      }
+}
 
 h4, .h4 {
     margin: 0px;
@@ -34,14 +39,17 @@ h4, .h4 {
 }
 
 .list-inline {
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin: 10px 0px 0px 0px;
 }
 
 .list-inline-item {
-    margin-right: 10px;
+    margin: 0px 10px 10px 0px; 
 }
 
 .content {
     white-space: pre-line; 
+}
+
+.personal-experience-detail p {
+    font-size: 18px;
 }

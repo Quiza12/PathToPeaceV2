@@ -1,13 +1,14 @@
 export class Podcast {
     title: string;
-    link: string;
     tags: string[];
+    link: string;
+    description: string;
   
-    constructor(title: string, link: string, tags: string[])
-    {
+    constructor(title: string, link: string, tags: string[], description: string) {
         this.title = title;
-        this.link = link;
         this.tags = tags;
+        this.link = link;
+        this.description = description;
     }
   }
   

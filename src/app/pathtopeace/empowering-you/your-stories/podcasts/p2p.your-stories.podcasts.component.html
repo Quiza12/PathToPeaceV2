@@ -6,16 +6,18 @@
                 <h2 class="title">Podcast Interviews</h2>
             </div>
             <div class="row"> 
-                <p>I sit down with someone who bravely shares their history, and mental health journey.</p>
-                <p>The aim with these interviews is to openly share and discuss the issues. And finally, providing, in reflection:</p>
-                <p></p>
-                <br/>
-                <ul>
-                    <li>Advice</li>
-                    <li>Revelations</li>
-                    <li>Hope</li>
-                </ul>
-                <p>Have a look below at the most recent ones below.</p>
+                <div class="col-md-10 mr-auto ml-auto">
+                    <p>I sit down with someone who bravely shares their history, and mental health journey.</p>
+                    <p>The aim with these interviews is to openly share and discuss the issues. And finally, providing, in reflection:</p>
+                    <p></p>
+                    <br/>
+                    <ul>
+                        <li>Advice</li>
+                        <li>Revelations</li>
+                        <li>Hope</li>
+                    </ul>
+                    <p>Have a look below at the most recent ones below.</p>
+                </div>
             </div>
             <br/>
             <div class="row"> 
@@ -29,6 +31,7 @@
                                 <li class="list-inline-item tag" *ngFor="let tag of podcast.tags; let j = index">{{tag}}</li>
                             </ul>
                         </div>
+                        <p>{{podcast.description}}</p>
                     </div>
                 </div>
             </div>

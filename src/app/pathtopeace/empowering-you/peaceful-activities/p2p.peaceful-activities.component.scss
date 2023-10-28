@@ -6,7 +6,27 @@
    color: #fff;
    background: #59797D;
    padding: 20px;
+
+   &:hover {
+      background: #2c3b3d;
+    }
 }
+
+.original {
+   display: block;
+}
+
+.overlay {
+   display: none;
+}
+
+.peaceful-activity:hover .original {
+   display: none;
+ }
+ 
+ .peaceful-activity:hover .overlay {
+   display: block;
+ }
 
 h4, .h4 {
    margin: 0px;

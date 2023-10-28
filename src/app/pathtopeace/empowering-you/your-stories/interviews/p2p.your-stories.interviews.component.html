@@ -14,18 +14,20 @@
             <br/>
             <div class="row"> 
                 <div class="col-md-4 mr-auto ml-auto" *ngFor="let personalExperience of personalExperiences; let i = index">
-                    <div class="rounded personal-experience">
-                        <h4>{{personalExperience.title}}</h4>
-                        <div>
-                            <ul class="list-inline">
-                                <li class="list-inline-item tag" *ngFor="let tag of personalExperience.tags; let j = index">{{tag}}</li>
-                            </ul>
+                    <a href="#/your-stories/interviews/{{personalExperience.id}}"> 
+                        <div class="rounded personal-experience">
+                            <h4>{{personalExperience.title}}</h4>
+                            <div>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item tag" *ngFor="let tag of personalExperience.tags; let j = index">{{tag}}</li>
+                                </ul>
+                            </div>
+                            <!-- <br/> -->
+                            <p class="excerpt">{{personalExperience.excerpt}}</p>
+                            <!-- <br/> -->
+                            <!-- <a href="" class="btn btn-outline-warning btn-round"><b>Continue reading...</b></a> -->
                         </div>
-                        <br/>
-                        <p class="excerpt">{{personalExperience.preamble}}</p>
-                        <br/>
-                        <a href="#/your-stories/interviews/{{personalExperience.id}}" class="btn btn-outline-warning btn-round"><b>Continue reading...</b></a>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

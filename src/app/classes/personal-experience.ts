@@ -1,16 +1,15 @@
 export class PersonalExperience {
-    title: string;
-    tags: string[];
-    preamble: string;
     id: string;
+    title: string;
+    excerpt: string;
+    tags: string[];
     content: string;
   
-    constructor(title: string, tags: string[], preamble: string, id: string, content: string)
-    {
-        this.title = title;
-        this.tags = tags;
-        this.preamble = preamble;
+    constructor(id: string, title: string, excerpt: string, tags: string[], content: string) {
         this.id = id;
+        this.title = title;
+        this.excerpt = excerpt;
+        this.tags = tags;
         this.content = content;
     }
   }
