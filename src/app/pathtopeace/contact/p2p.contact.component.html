@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-8 mr-auto ml-auto">
                     <h2 class="text-center">Keep in touch?</h2>
-                    <form class="contact-form">
+                    <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Name</label>
@@ -13,7 +13,7 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                    <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -22,12 +22,12 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
                                 </div>
                             </div>
                         </div>
                         <label>Message</label>
-                        <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
+                        <textarea class="form-control" rows="4" id="message" name="message" formControlName="message" placeholder="Your message..."></textarea>
                         <div class="row">
                             <div class="col-md-4 mr-auto ml-auto">
                                 <button class="btn btn-warning btn-lg btn-fill">Send Message</button>

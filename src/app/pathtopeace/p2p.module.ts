@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 import { P2pEmpoweringYouModule } from './empowering-you/p2p.empowering-you.module';
 import { P2pCoachingModule } from './coaching/p2p.coaching.module';
@@ -14,9 +15,11 @@ import { P2pContactComponent } from './contact/p2p.contact.component';
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         NgbModule,
         P2pEmpoweringYouModule,
-        P2pCoachingModule
+        P2pCoachingModule,
+        HttpClientModule
     ],
     declarations: [
         P2pHomeComponent,
