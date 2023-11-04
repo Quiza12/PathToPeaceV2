@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { P2pCoachingComponent } from './p2p.coaching.component';
@@ -13,6 +13,7 @@ import { P2pCoachingApplyComponent } from './programs/p2p.coaching.apply.compone
         CommonModule,
         FormsModule,
         NgbModule,
+        ReactiveFormsModule
     ],
     declarations: [
         P2pCoachingComponent,

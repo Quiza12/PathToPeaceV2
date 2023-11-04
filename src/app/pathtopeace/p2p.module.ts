@@ -10,6 +10,9 @@ import { P2pCoachingModule } from './coaching/p2p.coaching.module';
 import { P2pHomeComponent } from './home/p2p.home.component';
 import { P2pAboutMeComponent } from './about-me/p2p.about-me.component';
 import { P2pContactComponent } from './contact/p2p.contact.component';
+import { P2pContactResultComponent } from './contact/p2p.contact.result.component';
+
+import { AzureService } from '../shared/services/azure.service';
 
 @NgModule({
     imports: [
@@ -24,7 +27,11 @@ import { P2pContactComponent } from './contact/p2p.contact.component';
     declarations: [
         P2pHomeComponent,
         P2pAboutMeComponent,
-        P2pContactComponent
+        P2pContactComponent,
+        P2pContactResultComponent
+    ],
+    providers: [
+        AzureService
     ]
 })
 export class P2pModule { }

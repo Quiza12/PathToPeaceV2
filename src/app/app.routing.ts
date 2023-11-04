@@ -16,6 +16,7 @@ import { P2pCoachingChildProgramsComponent } from './pathtopeace/coaching/progra
 import { P2pCoachingApplyComponent } from './pathtopeace/coaching/programs/p2p.coaching.apply.component';
 import { P2pAboutMeComponent } from './pathtopeace/about-me/p2p.about-me.component';
 import { P2pContactComponent } from './pathtopeace/contact/p2p.contact.component';
+import { P2pContactResultComponent } from './pathtopeace/contact/p2p.contact.result.component';
 import { P2pYourStoriesLandingComponent } from './pathtopeace/empowering-you/your-stories/p2p.your-stories.landing.component';
 import { P2pYourStoriesPodcastsComponent } from './pathtopeace/empowering-you/your-stories/podcasts/p2p.your-stories.podcasts.component';
 import { P2pYourStoriesInterviewsComponent } from './pathtopeace/empowering-you/your-stories/interviews/p2p.your-stories.interviews.component';
@@ -31,9 +32,10 @@ const routes: Routes =[
     { path: 'coaching',                  component: P2pCoachingComponent },
     { path: 'coaching/adult-programs',   component: P2pCoachingAdultProgramsComponent },
     { path: 'coaching/child-programs',   component: P2pCoachingChildProgramsComponent },
-    { path: 'coaching/apply',            component: P2pCoachingApplyComponent },
+    { path: 'coaching/apply/:program',   component: P2pCoachingApplyComponent },
     { path: 'about',                     component: P2pAboutMeComponent },
     { path: 'contact',                   component: P2pContactComponent },
+    { path: 'contact/:result',           component: P2pContactResultComponent },
     { path: 'your-stories',              component: P2pYourStoriesLandingComponent },
     { path: 'your-stories/podcasts',     component: P2pYourStoriesPodcastsComponent },
     { path: 'your-stories/interviews',   component: P2pYourStoriesInterviewsComponent },

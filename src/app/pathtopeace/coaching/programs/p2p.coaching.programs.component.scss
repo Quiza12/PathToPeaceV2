@@ -7,3 +7,12 @@
 h4, .h4 {
     margin: 0px;
 }
+
+select {
+    /*webkit browsers */
+    -webkit-appearance: auto;
+    /*Firefox */
+    -moz-appearance: auto;
+    /* modern browsers */
+    appearance: auto;
+}
