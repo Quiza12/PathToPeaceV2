@@ -27,12 +27,12 @@ export class P2pContactResultComponent implements OnInit {
   determineResponse() {
     if (this.result === "success") {
       this.header = "Good on You!";
-      this.image = "assets/img/p2p/contact/contact-result-success.svg";
+      this.image = "assets/img/contact/contact-result-success.svg";
       this.firstMessage = "You\'ve taken your first step on the Path to Peace.";
       this.secondMessage = "You\'ll receive a reply within 48 hours.";
     } else {
       this.header = "Uh Oh!";
-      this.image = "assets/img/p2p/contact/contact-result-failure.svg";
+      this.image = "assets/img/contact/contact-result-failure.svg";
       this.firstMessage = "Something\'s gone wrong.";
       this.secondMessage = "Contact me on lachlan.querzoli@.gmail.com for the time being.";
     }

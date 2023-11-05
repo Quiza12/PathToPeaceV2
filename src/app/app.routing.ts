@@ -3,12 +3,6 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ComponentsComponent } from './components/components.component';
-import { ProfileComponent } from './examples/profile/profile.component';
-import { SignupComponent } from './examples/signup/signup.component';
-import { LandingComponent } from './examples/landing/landing.component';
-import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
-
 import { P2pHomeComponent } from './pathtopeace/home/p2p.home.component';
 import { P2pCoachingComponent } from './pathtopeace/coaching/p2p.coaching.component';
 import { P2pCoachingAdultProgramsComponent } from './pathtopeace/coaching/programs/p2p.coaching.adult-programs.component';
@@ -26,28 +20,22 @@ import { P2pPeaceOfAdviceComponent } from './pathtopeace/empowering-you/peace-of
 
 
 const routes: Routes =[
-    // { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: '', redirectTo: 'p2p', pathMatch: 'full' },
-    { path: 'p2p',                       component: P2pHomeComponent },
-    { path: 'coaching',                  component: P2pCoachingComponent },
-    { path: 'coaching/adult-programs',   component: P2pCoachingAdultProgramsComponent },
-    { path: 'coaching/child-programs',   component: P2pCoachingChildProgramsComponent },
-    { path: 'coaching/apply/:program',   component: P2pCoachingApplyComponent },
-    { path: 'about',                     component: P2pAboutMeComponent },
-    { path: 'contact',                   component: P2pContactComponent },
-    { path: 'contact/:result',           component: P2pContactResultComponent },
-    { path: 'your-stories',              component: P2pYourStoriesLandingComponent },
-    { path: 'your-stories/podcasts',     component: P2pYourStoriesPodcastsComponent },
-    { path: 'your-stories/interviews',   component: P2pYourStoriesInterviewsComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home',                          component: P2pHomeComponent },
+    { path: 'coaching',                      component: P2pCoachingComponent },
+    { path: 'coaching/adult-programs',       component: P2pCoachingAdultProgramsComponent },
+    { path: 'coaching/child-programs',       component: P2pCoachingChildProgramsComponent },
+    { path: 'coaching/apply/:program',       component: P2pCoachingApplyComponent },
+    { path: 'about',                         component: P2pAboutMeComponent },
+    { path: 'contact',                       component: P2pContactComponent },
+    { path: 'contact/:result',               component: P2pContactResultComponent },
+    { path: 'your-stories',                  component: P2pYourStoriesLandingComponent },
+    { path: 'your-stories/podcasts',         component: P2pYourStoriesPodcastsComponent },
+    { path: 'your-stories/interviews',       component: P2pYourStoriesInterviewsComponent },
     { path: 'your-stories/interviews/:id',   component: P2pYourStoriesInterviewsViewComponent },
-    { path: 'peaceful-activities',       component: P2pPeacefulActivitiesComponent },
-    { path: 'peace-of-advice',           component: P2pPeaceOfAdviceComponent },
+    { path: 'peaceful-activities',           component: P2pPeacefulActivitiesComponent },
+    { path: 'peace-of-advice',               component: P2pPeaceOfAdviceComponent },
 
-    { path: 'home',                      component: ComponentsComponent },
-    { path: 'user-profile',              component: ProfileComponent },
-    { path: 'signup',                    component: SignupComponent },
-    { path: 'landing',                   component: LandingComponent },
-    { path: 'nucleoicons',               component: NucleoiconsComponent }
 ];
 
 @NgModule({

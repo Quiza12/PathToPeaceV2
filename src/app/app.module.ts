@@ -9,8 +9,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { ComponentsModule } from './components/components.module';
-import { ExamplesModule } from './examples/examples.module';
 import { P2pModule } from './pathtopeace/p2p.module';
 
 @NgModule({
@@ -24,8 +22,6 @@ import { P2pModule } from './pathtopeace/p2p.module';
     NgbModule,
     FormsModule,
     RouterModule,
-    ComponentsModule,
-    ExamplesModule,
     AppRoutingModule,
     P2pModule,
     ReactiveFormsModule
