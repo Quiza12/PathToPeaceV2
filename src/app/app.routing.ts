@@ -3,20 +3,20 @@ import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { P2pHomeComponent } from './pathtopeace/home/p2p.home.component';
-import { P2pCoachingComponent } from './pathtopeace/coaching/p2p.coaching.component';
-import { P2pCoachingAdultProgramsComponent } from './pathtopeace/coaching/programs/p2p.coaching.adult-programs.component';
-import { P2pCoachingChildProgramsComponent } from './pathtopeace/coaching/programs/p2p.coaching.child-programs.component';
-import { P2pCoachingApplyComponent } from './pathtopeace/coaching/programs/p2p.coaching.apply.component';
-import { P2pAboutMeComponent } from './pathtopeace/about-me/p2p.about-me.component';
-import { P2pContactComponent } from './pathtopeace/contact/p2p.contact.component';
-import { P2pContactResultComponent } from './pathtopeace/contact/p2p.contact.result.component';
-import { P2pYourStoriesLandingComponent } from './pathtopeace/empowering-you/your-stories/p2p.your-stories.landing.component';
-import { P2pYourStoriesPodcastsComponent } from './pathtopeace/empowering-you/your-stories/podcasts/p2p.your-stories.podcasts.component';
-import { P2pYourStoriesInterviewsComponent } from './pathtopeace/empowering-you/your-stories/interviews/p2p.your-stories.interviews.component';
-import { P2pYourStoriesInterviewsViewComponent } from './pathtopeace/empowering-you/your-stories/interviews/p2p.your-stories.interviews.view.component';
-import { P2pPeacefulActivitiesComponent } from './pathtopeace/empowering-you/peaceful-activities/p2p.peaceful-activities.component';
-import { P2pPeaceOfAdviceComponent } from './pathtopeace/empowering-you/peace-of-advice/p2p.peace-of-advice.component';
+import { P2pHomeComponent } from './components/home/p2p.home.component';
+import { P2pCoachingComponent } from './components/coaching/p2p.coaching.component';
+import { P2pCoachingAdultProgramsComponent } from './components/coaching/programs/p2p.coaching.adult-programs.component';
+import { P2pCoachingChildProgramsComponent } from './components/coaching/programs/p2p.coaching.child-programs.component';
+import { P2pCoachingApplyComponent } from './components/coaching/programs/p2p.coaching.apply.component';
+import { P2pAboutMeComponent } from './components/about-me/p2p.about-me.component';
+import { P2pContactComponent } from './components/contact/p2p.contact.component';
+import { P2pContactResultComponent } from './components/contact/p2p.contact.result.component';
+import { P2pYourStoriesLandingComponent } from './components/empowering-you/your-stories/p2p.your-stories.landing.component';
+import { P2pYourStoriesPodcastsComponent } from './components/empowering-you/your-stories/podcasts/p2p.your-stories.podcasts.component';
+import { P2pYourStoriesInterviewsComponent } from './components/empowering-you/your-stories/interviews/p2p.your-stories.interviews.component';
+import { P2pYourStoriesInterviewsViewComponent } from './components/empowering-you/your-stories/interviews/p2p.your-stories.interviews.view.component';
+import { P2pPeacefulActivitiesComponent } from './components/empowering-you/peaceful-activities/p2p.peaceful-activities.component';
+import { P2pPeaceOfAdviceComponent } from './components/empowering-you/peace-of-advice/p2p.peace-of-advice.component';
 
 
 const routes: Routes =[

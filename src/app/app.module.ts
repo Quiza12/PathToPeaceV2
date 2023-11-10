@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { P2pModule } from './pathtopeace/p2p.module';
+import { P2pModule } from './components/p2p.module';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,57 @@
+
+<div class="main">
+    <div class="section landing-section" style="margin-top: 120px; margin-bottom: 60px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <h2 class="text-center">Keep in touch?</h2>
+                    <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend" >
+                                      <span class="input-group-text">  <i class="nc-icon nc-single-02"></i></span>
+                                    </div>
+                                    <input type="text" style="border: 1px solid #DDDDDD;" class="form-control {{nameCss}}" id="name" name="name" formControlName="name" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                    <div *ngIf="nameRequired" class="form-control-feedback">Name is required.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control {{emailCss}}" id="email" name="email" formControlName="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <div *ngIf="emailRequired" class="form-control-feedback">Email is required.</div>
+                                    <div *ngIf="emailValidFormat" class="form-control-feedback">Not a valid email.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Message</label>
+                                <textarea class="form-control {{messageCss}} form-control-textarea" rows="4" id="message" name="message" formControlName="message" placeholder="Your message..."></textarea>
+                                <div *ngIf="messageRequired" class="form-control-feedback">Message is required.</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mr-auto ml-auto text-center">
+                                <button *ngIf="!loading" class="btn btn-warning btn-lg btn-fill">Send Message</button>                              
+                                <button *ngIf="loading" class="btn btn-warning btn-lg btn-fill" disabled>
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

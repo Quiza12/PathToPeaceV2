@@ -13,7 +13,7 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="name" name="name" formControlName="name" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                                    <input type="text" style="border: 1px solid #DDDDDD;" class="form-control {{nameCss}}" id="name" name="name" formControlName="name" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -22,7 +22,7 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <input type="text" class="form-control {{emailCss}}" id="email" name="email" formControlName="email" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text">  <i class="nc-icon nc-atom"></i></span>
                                     </div>
-                                    <select [(ngModel)]="program" placeholder="Program" class="form-control" id="program" name="program" formControlName="program" (focus)="focus1=true" (blur)="focus1=false">
+                                    <select [(ngModel)]="program" style="border: 1px solid #DDDDDD;" placeholder="Program" class="form-control" id="program" name="program" formControlName="program" (focus)="focus1=true" (blur)="focus1=false">
                                         <option *ngFor="let program of programs" [value]="program.viewValue">
                                           {{ program.viewValue }}
                                         </option>
@@ -46,15 +46,20 @@
                                     <div class="input-group-prepend">
                                       <span class="input-group-text">  <i class="nc-icon nc-mobile"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="Phone Number" (focus)="focus1=true" (blur)="focus1=false" >
+                                    <input type="text" style="border: 1px solid #DDDDDD;" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="Phone Number" (focus)="focus1=true" (blur)="focus1=false" >
                                 </div>
                             </div>
                         </div>
                         <label>Greatest challenge?</label>
-                        <textarea class="form-control" rows="4" id="greatestChallenge" name="greatestChallenge" formControlName="greatestChallenge" placeholder="What is your greatest challenge in life right now"></textarea>
+                        <textarea class="form-control" rows="4" id="greatestChallenge" name="greatestChallenge" formControlName="greatestChallenge" placeholder="What is your greatest challenge in life right now?"></textarea>
                         <div class="row">
-                            <div class="col-md-4 mr-auto ml-auto">
-                                <button class="btn btn-warning btn-lg btn-fill">Submit Application</button>
+                            <div class="col-md-4 mr-auto ml-auto text-center">
+                                <button *ngIf="!loading" class="btn btn-warning btn-lg btn-fill">Submit Application</button>                              
+                                <button *ngIf="loading" class="btn btn-warning btn-lg btn-fill" disabled>
+                                    <div class="spinner-border" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </button>
                             </div>
                         </div>
                     </form>

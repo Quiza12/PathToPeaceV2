@@ -16,6 +16,18 @@ export class P2pCoachingApplyComponent implements OnInit {
   coachingForm: FormGroup;
   program: string;
 
+  submitted = false;
+  nameRequired = false;
+  emailRequired = false;
+  emailValidFormat = false;
+  loading = false;
+
+  nameCss = '';
+  emailCss = '';
+
+  formControlSuccessCss = 'border-success';
+  formControlFailureCss = 'border-danger';
+
   programs = [
     {value: 'adult-deep-intensive', viewValue: 'Adult Program - Deep Intensive'},
     {value: 'adult-deep-rebound', viewValue: 'Adult Program - The Deep Rebound'},
@@ -34,18 +46,61 @@ export class P2pCoachingApplyComponent implements OnInit {
       email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
       message: null,
       program: new FormControl(this.program, [Validators.required]),
-      phone: new FormControl('', [Validators.required]),
-      greatestChallenge: new FormControl('', [Validators.required]),
+      phone: new FormControl(''),
+      greatestChallenge: new FormControl(''),
     })
   }
 
   onSubmit() {
-    console.log(this.coachingForm.value);
+    this.submitted = true;
+    
+    this.clearPreviousFormStyles();
+    this.validateName();
+    this.validateEmail();
+
+    if (this.coachingForm.invalid) {
+      return;
+    }
+
+    this.loading = true;
+
     this.azureSevice.postData(this.coachingForm.value).subscribe({
       next: (v) => this.routeResult("success", "Successful call"),
       error: (e) => this.routeResult("failure", e.message),
     })
+  }
 
+  clearPreviousFormStyles() {
+    this.nameRequired = false;
+    this.emailRequired = false;
+    this.emailValidFormat = false;
+
+    this.nameCss = '';
+    this.emailCss = '';
+  }
+    
+  validateName() {
+    if (this.coachingForm.controls['name'].errors && this.coachingForm.controls['name'].errors.required == true) {
+      this.nameRequired = true;
+      this.nameCss = this.formControlFailureCss;
+    } else {
+      this.nameCss = this.formControlSuccessCss;
+    }
+  }
+
+  validateEmail() {
+    if (this.coachingForm.controls['email'].errors) {
+      if (this.coachingForm.controls['email'].errors.required == true) {
+        this.emailRequired = true;
+        this.emailCss = this.formControlFailureCss;
+      }
+      if (this.coachingForm.controls['email'].errors.email == true) {
+        this.emailValidFormat = true;
+        this.emailCss = this.formControlFailureCss;
+      }
+    } else {
+      this.emailCss = this.formControlSuccessCss;
+    }
   }
 
   routeResult(result: string, message: string) {
