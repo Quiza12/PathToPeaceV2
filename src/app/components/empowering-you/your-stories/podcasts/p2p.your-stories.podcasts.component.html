@@ -21,11 +21,13 @@
             </div>
             <br/>
             <div class="row"> 
-                <div class="col-md-6 mr-auto ml-auto" *ngFor="let podcast of podcasts; let i = index">
+                <div class="col-md-6 mr-auto ml-auto mb-4 mb-md-4" *ngFor="let podcast of podcasts; let i = index">
                     <div class="rounded podcast">
                         <h4>{{podcast.title}}</h4>
                         <br/>
-                        <iframe [src]="santiseUrl(podcast.link)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe [src]="santiseUrl(podcast.link)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                         <div>
                             <ul class="list-inline">
                                 <li class="list-inline-item tag" *ngFor="let tag of podcast.tags; let j = index">{{tag}}</li>

@@ -164,9 +164,10 @@
 
         &:focus,
         &:hover{
-            background-color: transparent;
-            @include opacity(1);
-            color: $white-color;
+            // background-color: transparent;
+            // @include opacity(1);
+            // color: $white-color;
+            color: #403D39 !important;
         }
     }
 
@@ -180,9 +181,10 @@
         .active .nav-link:focus,
         .nav-item .nav-link:hover,
         .nav-item .nav-link:focus{
-            background-color: transparent;
-            color: $white-color;
-            @include opacity(1);
+            // background-color: transparent;
+            // color: $white-color;
+            // @include opacity(1);
+            color: #403D39 !important;
         }
         .nav .nav-item a.btn:hover{
             background-color: transparent;
