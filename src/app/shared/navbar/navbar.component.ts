@@ -9,6 +9,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    public mobileMenuOpen: boolean;s
 
     constructor(public location: Location, private element : ElementRef) {
         this.sidebarVisible = true;
@@ -17,12 +18,14 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+        this.mobileMenuOpen = false;
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
         // console.log(html);
-        // console.log(toggleButton, 'toggle');
+        console.log("open");
+        this.mobileMenuOpen = true;
 
         setTimeout(function(){
             toggleButton.classList.add('toggled');
@@ -33,7 +36,8 @@ export class NavbarComponent implements OnInit {
     };
     sidebarClose() {
         const html = document.getElementsByTagName('html')[0];
-        // console.log(html);
+        console.log("close");
+        this.mobileMenuOpen = false;
         this.toggleButton.classList.remove('toggled');
         this.sidebarVisible = false;
         html.classList.remove('nav-open');

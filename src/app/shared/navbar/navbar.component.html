@@ -17,25 +17,26 @@
                 <li class="nav-item">
                     <a [routerLink]="['/coaching']" class="nav-link"><i class="nc-icon nc-compass-05"></i>Coaching</a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a [routerLink]="['/your-stories']" class="dropdown-item" >Your Stories</a>
-                        <a [routerLink]="['/peaceful-activities']" class="dropdown-item">Peaceful Activities</a>
-                        <a [routerLink]="['/peace-of-advice']" class="dropdown-item">Peace of Advice</a>
-                    </ul>
-                  </li> -->
-                <li class="nav-item">
-                    <div ngbDropdown class="d-inline-block dropdown">
-                      <a class="nav-link" id="empowering-you-dropdown" style="margin-bottom: 0px;" ngbDropdownToggle><i class="nc-icon nc-satisfied"></i>Empowering You</a>
-                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
-                        <a [routerLink]="['/your-stories']" class="dropdown-item" >Your Stories</a>
-                        <a [routerLink]="['/peaceful-activities']" class="dropdown-item">Peaceful Activities</a>
-                        <a [routerLink]="['/peace-of-advice']" class="dropdown-item">Peace of Advice</a>
-                      </div>
-                    </div>
+                <div *ngIf="!mobileMenuOpen">
+                    <li class="nav-item">
+                        <div ngbDropdown class="d-inline-block dropdown">
+                          <a class="nav-link" id="empowering-you-dropdown" style="margin-bottom: 0px;" ngbDropdownToggle><i class="nc-icon nc-satisfied"></i>Empowering You</a>
+                          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary">
+                            <a [routerLink]="['/your-stories']" class="dropdown-item" >Your Stories</a>
+                            <a [routerLink]="['/peaceful-activities']" class="dropdown-item">Peaceful Activities</a>
+                            <a [routerLink]="['/peace-of-advice']" class="dropdown-item">Peace of Advice</a>
+                          </div>
+                        </div>
+                    </li>
+                </div>
+                <div *ngIf="mobileMenuOpen" class="nav-item">
+                    <a [routerLink]="['/your-stories']" class="nav-link"><i class="nc-icon nc-single-02"></i>Your Stories</a>
+                </div>
+                <li *ngIf="mobileMenuOpen" class="nav-item">
+                    <a [routerLink]="['/peaceful-activities']" class="nav-link"><i class="nc-icon nc-sun-fog-29"></i>Peaceful Activities</a>
+                </li>
+                <li *ngIf="mobileMenuOpen" class="nav-item">
+                    <a [routerLink]="['/peace-of-advice']" class="nav-link"><i class="nc-icon nc-diamond"></i>Peace of Advice</a>
                 </li>
                 <li class="nav-item">
                     <a [routerLink]="['/about']" class="nav-link"><i class="nc-icon nc-alert-circle-i"></i>About</a>
