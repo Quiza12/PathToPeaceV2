@@ -180,7 +180,7 @@
 }
 
 .footer nav>ul a:not(.btn):hover, .footer nav>ul a:not(.btn):focus {
-    color: #E3E3E3;
+    /* color: #E3E3E3; */
 }
 
 .footer .copyright {
