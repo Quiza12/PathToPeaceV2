@@ -1,12 +1,16 @@
 
 @media (max-width: 767px) {
     .main {
-        margin-top: 100px;
+        margin-top: 130px;
     }
 }
 
 @media (min-width: 768px) {
     .main {
-        margin-top: 0px;
+        margin-top: 50px;
     }   
+}
+
+.section {
+    padding-top: 50px;
 }
